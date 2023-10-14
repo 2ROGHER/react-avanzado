@@ -29,10 +29,23 @@ Cuando una funcion en mas `expensive` en terminos de performance es necesario us
 * Este hook nos permite resolver las funciones de control de cambios en props, si se han cambiado actualizamos si no han cambiado mostramos los datos `registrado-guardado`.
 * Este es es controlador para los `useMemos()`
 
-*`diferencias`* 
-1. `useMemo()` se utiliza para la creacion de nuevos compoentes, mientas que `useCallback()` se usa para funciones en linea dentro de un componente
+*`DIFERENCIAS`* 
+
+1. `useMemo()` se utiliza para la creacion de nuevos compoentes, mientas que `useCallback()` se usa para funciones en linea dentro de un componentes.
 2. `useMemo()` es la alternativa para `React.memo()` para componentes de `clase`.
 3. Son funciones de creacion que deben memorizar algo
 4. `useCallback()` se usa para memorizar valores listados en la dependencia `[]`. son Funciones en linea.
 5. `useMEmo()` se usa para crear componentes `memorizados`,mientras que `useCallback()` se usa para memorizar en cualquier componete `informacion` que queremos que se registre.
+
 6. `useCallback()` se usa para memorizar aquellos valore que van a cambiar, si cambian se renderiza el componete y sino se muestra la información que se ha guardado.
+
+7. `useCallback`: se usa para memorizar funciones o para memorizar el resultado de las funciones que se han memorizado.
+
+8. _`Si una aplicacion requiere una gestion de PERFORMANCE es necesario utilizar estas tecnicas de rendemiento de aplicaciones, no usar siempre, sino solo cuando se requiere`_
+
+## 1.3 Cuando usar hook useMemo()
+
+* Componente funcional que recibe unas props y siempre devuelve lo mismo
+* Cuando un componente se re-renderiza demasiadas veces(repetitivo).
+* Cuando un componente recibe las mismas props y re-renderiza
+* Cuando los componentes son muy grandes que contienen muchos elementos del DOM/UI que dependen de las props.
