@@ -17,4 +17,7 @@ Tener en cuenta que las PWAs trabajan en entorno de *`produccion`* no de desarro
 3. *Crear los archivos relacionados con el `service-worker.js` y el `serviceWorkerRegistration.js`*
     - Copiar y pegar estoy archivios de la leccion anterior
     - Con los comentarios tambien se actualiza la aplicacion
-
+4. *Instalar la dependencia de `service-worker-updater`*
+```bash
+    $ npm i  --save-dev @3m1/service-worker-updater
+```
