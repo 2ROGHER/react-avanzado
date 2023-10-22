@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-
+/**
+ * Este es el componente que no retorna un nueva tarea agregado a la lista de tareas.
+ * @param {object[]} param0 
+ * @returns {React.Component}
+ */
 const AddNote = ({ addNote }) => {
   const [newNote, setNewNote] = useState("");
 
